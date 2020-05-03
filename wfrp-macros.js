@@ -72,3 +72,14 @@ Hooks.on("wfrp4e:rollPrayerTest", result => {
     macro.execute()
   }
 })
+
+Hooks.on('init', () => {
+    game.settings.register('wfrp-macros', 'trappingStatus', {
+      name: "Trapping Status,",
+      hint: "If you lack the trappings associated w/ your career, you take a malus to your status.",
+      scope: 'world',
+      config: true,
+      default: false,
+      type: Boolean,
+    });
+})
